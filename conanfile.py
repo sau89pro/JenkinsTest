@@ -13,7 +13,7 @@ class JenkinsTestConan(ConanFile):
     no_copy_source = True
 
     def build(self):
-        cmake = CMake(self)
+        cmake = CMake(self, cmake_program="C:/CMake/bin/cmake.exe")
         cmake.configure(source_folder="src")
         cmake.build()
         cmake.install()
